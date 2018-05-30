@@ -1,0 +1,59 @@
+.container {
+font-family: 'Verdana', sans-serif;
+width: 1000px;
+margin: 0 auto;
+}
+
+
+.progress-bar  .step {
+font-size: 14px;
+text-align: center;
+color: white;
+cursor: default;
+margin: 0 3px;
+padding: 10px 10px 10px 30px;
+min-width: 180px;
+float: left;
+position: relative;
+background-color: #037dae;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none; 
+transition: background-color 0.2s ease;
+}
+
+.progress-bar  .step:after,
+.progress-bar  .step:before {
+content: " ";
+position: absolute;
+top: 0;
+right: -17px;
+width: 0;
+height: 0;
+border-top: 20px solid transparent;
+border-bottom: 17px solid transparent;
+border-left: 17px solid #037dae;	
+z-index: 2;
+}
+
+.progress-bar  .step:before {
+right: auto;
+left: 0;
+border-left: 17px solid #fff;	
+z-index: 0;
+}
+
+.progress-bar  .step:first-child:before {
+border: none;
+}
+
+.progress-bar  .step.current {
+	color: #fff;
+	background-color: #23468c;
+}
+
+
+.progress-bar  .step.current:after {
+	border-left: 17px solid #23468c;	
+}
