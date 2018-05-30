@@ -1,0 +1,10 @@
+.progress-widget-container {
+  background: lightblue;
+  height: 800px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.progress-bar {
+  width: 100%;
+}
