@@ -10,7 +10,6 @@ margin: 0 auto;
 font-size: 14px;
 text-align: center;
 color: black;
-cursor: default;
 margin: 0 3px;
 padding: 10px 10px 10px 30px;
 min-width: 180px;
@@ -21,7 +20,8 @@ background-color: #C6C6C6;
 
 @media only screen and (max-width: 600px) {
   .progress-bar .step {
-      min-width: 80px;
+      min-width: 70px;
+      color: transparent;
   }
   .progress-bar .step.active {
     width: 180px;
