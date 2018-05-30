@@ -1,3 +1,4 @@
+
 .container {
 font-family: 'Verdana', sans-serif;
 width: 1000px;
@@ -8,20 +9,25 @@ margin: 0 auto;
 .progress-bar  .step {
 font-size: 14px;
 text-align: center;
-color: white;
+color: black;
 cursor: default;
 margin: 0 3px;
 padding: 10px 10px 10px 30px;
 min-width: 180px;
 float: left;
 position: relative;
-background-color: #037dae;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
-user-select: none; 
-transition: background-color 0.2s ease;
+background-color: #C6C6C6;
 }
+
+@media only screen and (max-width: 600px) {
+  .progress-bar .step {
+      min-width: 80px;
+  }
+  .progress-bar .step.active {
+    width: 180px;
+  }
+}
+
 
 .progress-bar  .step:after,
 .progress-bar  .step:before {
@@ -33,7 +39,7 @@ width: 0;
 height: 0;
 border-top: 20px solid transparent;
 border-bottom: 17px solid transparent;
-border-left: 17px solid #037dae;	
+border-left: 17px solid #C6C6C6;	
 z-index: 2;
 }
 
@@ -48,12 +54,12 @@ z-index: 0;
 border: none;
 }
 
-.progress-bar  .step.current {
+.progress-bar  .step.active {
 	color: #fff;
 	background-color: #23468c;
 }
 
 
-.progress-bar  .step.current:after {
+.progress-bar  .step.active:after {
 	border-left: 17px solid #23468c;	
 }
