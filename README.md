@@ -1,6 +1,6 @@
 # CS Coding Challenge
 
-# First test
+## First test
 
 Scope: CSS and Markup only
 
@@ -17,4 +17,6 @@ Problem Statement: Create a progress bar widget as shown in the video.
 
 Brownie Points: Unit tests and responsive behavior
 
-By Lina Z
+## My Approach  
+Timebox myself for each tests focusing on the most important features 
+- Lina Z
