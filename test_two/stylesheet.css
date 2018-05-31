@@ -1,65 +1,78 @@
-
 .container {
-font-family: 'Verdana', sans-serif;
-width: 1000px;
-margin: 0 auto;
+  font-family: 'Verdana', sans-serif;
+  margin: 0 auto;
 }
 
-
-.progress-bar  .step {
-font-size: 14px;
-text-align: center;
-color: black;
-margin: 0 3px;
-padding: 10px 10px 10px 30px;
-min-width: 180px;
-float: left;
-position: relative;
-background-color: #C6C6C6;
+.progress-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
 }
 
-@media only screen and (max-width: 600px) {
+.progress-bar .step {
+  color: transparent;
+  font-size: 10px;
+  text-align: center;
+  margin: 0 3px;
+  padding: 9px 10px 4px 30px;
+  position: relative;
+  background-color: #C6C6C6;
+  width: 10%;
+}
+
+.progress-bar .step.active {
+  width: 30%;
+}
+
+@media only screen and (min-width: 411px) {
   .progress-bar .step {
-      min-width: 70px;
-      color: transparent;
+    padding: 14px 10px 10px 30px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .progress-bar .step {
+    color: black;
+    font-size: 14px;
+    padding: 10px 10px 10px 30px;
+    width: 100%;
   }
   .progress-bar .step.active {
-    width: 180px;
+    width: 100%;
   }
 }
 
 
-.progress-bar  .step:after,
-.progress-bar  .step:before {
-content: " ";
-position: absolute;
-top: 0;
-right: -17px;
-width: 0;
-height: 0;
-border-top: 20px solid transparent;
-border-bottom: 17px solid transparent;
-border-left: 17px solid #C6C6C6;	
-z-index: 2;
+.progress-bar .step:after,
+.progress-bar .step:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: -17px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 17px solid #C6C6C6;
+  z-index: 2;
 }
 
-.progress-bar  .step:before {
-right: auto;
-left: 0;
-border-left: 17px solid #fff;	
-z-index: 0;
+.progress-bar .step:before {
+  right: auto;
+  left: 0;
+  border-left: 17px solid #fff;
+  z-index: 0;
 }
 
-.progress-bar  .step:first-child:before {
-border: none;
+.progress-bar .step:first-child:before {
+  border: none;
 }
 
-.progress-bar  .step.active {
-	color: #fff;
-	background-color: #23468c;
+.progress-bar .step.active {
+  color: #fff;
+  background-color: #23468c;
 }
 
-
-.progress-bar  .step.active:after {
-	border-left: 17px solid #23468c;	
+.progress-bar .step.active:after {
+  border-left: 17px solid #23468c;
 }
